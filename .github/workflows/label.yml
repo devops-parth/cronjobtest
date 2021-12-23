@@ -1,5 +1,5 @@
 name: Labeler
-on: [pull_request]
+on:
   push:
     branches:
       - main
@@ -17,7 +17,5 @@ jobs:
     steps:
     - uses: actions/labeler@v2
     - name: Running
-      run: |
-        echo "Running!"
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
